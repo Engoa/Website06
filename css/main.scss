@@ -20,9 +20,10 @@
 
 html {
  overflow-x: hidden;
-
 }
 body {
+ background: var(--bg-main);
+ width: 100%;
  font-family: 'Montserrat', sans-serif;
  font-size: 16px;
 }
@@ -54,7 +55,7 @@ body {
  right: -7rem;
  top: -2rem;
  z-index: -1;
- background: rgba(255, 255, 255, 0.25);
+ background: rgba(255, 255, 255, 0.363);
 }
 
 .container::after {
@@ -66,7 +67,7 @@ body {
  left: -7rem;
  bottom: -2rem;
  z-index: -1;
- background: rgba(255, 255, 255, 0.25);
+ background: rgba(255, 255, 255, 0.37);
 }
 // Circles in the background
 
@@ -75,7 +76,7 @@ body {
  position: relative;
  .leftnav {
   position: absolute;
-  width: 350px;
+  width: 250px;
   height: 80vh;
   left: 0%;
   display: flex;
@@ -86,6 +87,7 @@ body {
   padding: 3.3rem 0;
   color: var(--text-main);
   background: rgba(255, 255, 255, 0.466);
+  box-shadow: var(--boxshadow);
 
   .userprofile {
    text-align: center;
@@ -209,7 +211,7 @@ body {
  text-align: center;
 
  h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--whiteclr);
   font-weight: bold;
   margin-left: 0.3rem;
@@ -223,7 +225,7 @@ body {
 
 .freegamescontainer:hover,
 .freegamescontainer:focus {
- transform: translateY(3px);
+ transform: translateY(4px);
 }
 
 .freegamescontainer::after {
@@ -231,14 +233,14 @@ body {
  content: '';
  inset: 0;
  border-radius: 2rem;
- border: 2px solid var(--text-main);
+ border: 3px solid var(--text-main);
  opacity: 0;
  transition: opacity var(--speed);
 }
 
 .freegamescontainer:hover::after,
 .freegamescontainer:focus::after {
- opacity: 0.6;
+ opacity: 1;
 }
 
 // Bottom left box on left navigation bar
@@ -270,12 +272,20 @@ body {
 
   input {
    margin-top: 0.5rem;
-   padding: 0.5rem 8rem 0.5rem 1rem;
+   padding: 0.5rem 12rem 0.5rem 1rem;
    border-radius: 2rem;
    border: none;
    outline: none;
    background: var(--bg-glass);
    box-shadow: var(--boxshadow);
+  }
+
+  input::after {
+   content: '/f054';
+   font-weight: bold;
+   font-family: 'Font Awesome 5 Free';
+   color: var(--bg-main);
+   font-size: 1.1rem;
   }
  }
 }
@@ -295,7 +305,7 @@ body {
   justify-content: space-between;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   align-items: center;
-  width: 670px;
+  width: 750px;
 
   .gameinfo {
    text-align: center;
@@ -326,7 +336,7 @@ body {
 // Progress Bar
 
 .progress {
- background: var(--bg-main);
+ background: rgb(236, 236, 236);
  border-radius: 1rem;
  width: 300px;
  height: 25px;
@@ -337,11 +347,10 @@ body {
 
 .progress::after {
  content: '';
- background: rgb(236, 236, 236);
+ background: var(--bg-main);
  position: absolute;
- width: 100%;
+ width: 60%;
  height: 100%;
- left: 60%;
 }
 // Progress Bar
 
@@ -416,7 +425,7 @@ body {
   }
   .searchbar {
    margin-bottom: 0;
-   margin-top: 8rem;
+   margin-top: 9rem;
    h2 {
     font-size: 1.5rem;
    }
@@ -465,16 +474,9 @@ body {
   margin-left: auto;
   width: 85%;
  }
- .leftnav {
-  .userprofile {
-   display: hidden;
-   margin-top: 1.5rem;
-  }
- }
+
  .container {
   .leftnav {
-   width: 75vw;
-
    h2 {
     font-size: 0.8rem;
    }
@@ -543,7 +545,8 @@ body {
 
  .container {
   .leftnav {
-   width: 85vw;
+   width: 75vw;
+   margin: 1rem auto;
   }
  }
 }

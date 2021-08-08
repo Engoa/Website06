@@ -22,6 +22,8 @@ html {
 }
 
 body {
+  background: var(--bg-main);
+  width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
 }
@@ -55,7 +57,7 @@ body {
   right: -7rem;
   top: -2rem;
   z-index: -1;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.363);
 }
 
 .container::after {
@@ -67,7 +69,7 @@ body {
   left: -7rem;
   bottom: -2rem;
   z-index: -1;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.37);
 }
 
 .container {
@@ -76,7 +78,7 @@ body {
 
 .container .leftnav {
   position: absolute;
-  width: 350px;
+  width: 250px;
   height: 80vh;
   left: 0%;
   display: -webkit-box;
@@ -96,6 +98,8 @@ body {
   padding: 3.3rem 0;
   color: var(--text-main);
   background: rgba(255, 255, 255, 0.466);
+  -webkit-box-shadow: var(--boxshadow);
+          box-shadow: var(--boxshadow);
 }
 
 .container .leftnav .userprofile {
@@ -244,7 +248,7 @@ body {
 }
 
 .freegamescontainer h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--whiteclr);
   font-weight: bold;
   margin-left: 0.3rem;
@@ -258,8 +262,8 @@ body {
 
 .freegamescontainer:hover,
 .freegamescontainer:focus {
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 .freegamescontainer::after {
@@ -267,7 +271,7 @@ body {
   content: '';
   inset: 0;
   border-radius: 2rem;
-  border: 2px solid var(--text-main);
+  border: 3px solid var(--text-main);
   opacity: 0;
   -webkit-transition: opacity var(--speed);
   transition: opacity var(--speed);
@@ -275,7 +279,7 @@ body {
 
 .freegamescontainer:hover::after,
 .freegamescontainer:focus::after {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .rightnav {
@@ -320,13 +324,21 @@ body {
 
 .rightnav .searchbar input {
   margin-top: 0.5rem;
-  padding: 0.5rem 8rem 0.5rem 1rem;
+  padding: 0.5rem 12rem 0.5rem 1rem;
   border-radius: 2rem;
   border: none;
   outline: none;
   background: var(--bg-glass);
   -webkit-box-shadow: var(--boxshadow);
           box-shadow: var(--boxshadow);
+}
+
+.rightnav .searchbar input::after {
+  content: '/f054';
+  font-weight: bold;
+  font-family: 'Font Awesome 5 Free';
+  color: var(--bg-main);
+  font-size: 1.1rem;
 }
 
 .cards .card {
@@ -347,7 +359,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 670px;
+  width: 750px;
 }
 
 .cards .card .gameinfo {
@@ -374,7 +386,7 @@ body {
 }
 
 .progress {
-  background: var(--bg-main);
+  background: #ececec;
   border-radius: 1rem;
   width: 300px;
   height: 25px;
@@ -386,11 +398,10 @@ body {
 
 .progress::after {
   content: '';
-  background: #ececec;
+  background: var(--bg-main);
   position: absolute;
-  width: 100%;
+  width: 60%;
   height: 100%;
-  left: 60%;
 }
 
 @media only screen and (max-width: 1550px) {
@@ -476,7 +487,7 @@ body {
   }
   .rightnav .searchbar {
     margin-bottom: 0;
-    margin-top: 8rem;
+    margin-top: 9rem;
   }
   .rightnav .searchbar h2 {
     font-size: 1.5rem;
@@ -520,13 +531,6 @@ body {
     margin: 3rem auto;
     margin-left: auto;
     width: 85%;
-  }
-  .leftnav .userprofile {
-    display: hidden;
-    margin-top: 1.5rem;
-  }
-  .container .leftnav {
-    width: 75vw;
   }
   .container .leftnav h2 {
     font-size: 0.8rem;
@@ -591,7 +595,8 @@ body {
     display: none;
   }
   .container .leftnav {
-    width: 85vw;
+    width: 75vw;
+    margin: 1rem auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

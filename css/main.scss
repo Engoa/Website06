@@ -144,20 +144,20 @@ body {
 }
 
 .twitch:hover .hover1 {
- border: 2.2px solid rgb(100, 65, 165);
+ border: 3px solid rgb(100, 65, 165);
  transform: scale(1);
 }
 .youtube:hover .hover2 {
- border: 2.2px solid rgb(196, 48, 43);
+ border: 3px solid rgb(196, 48, 43);
  transform: scale(1);
 }
 
 .steam:hover .hover3 {
- border: 2.2px solid rgb(0, 0, 0);
+ border: 3px solid rgb(0, 0, 0);
  transform: scale(1);
 }
 .library:hover .hover4 {
- border: 2.2px solid rgb(196, 43, 99);
+ border: 3px solid rgb(196, 43, 99);
  transform: scale(1);
 }
 
@@ -461,6 +461,7 @@ body {
 @media only screen and (max-width: 650px) {
  .container {
   margin: 3rem auto;
+  width: 85%;
  }
  .leftnav {
   .userprofile {
@@ -506,8 +507,8 @@ body {
  }
  .rightnav {
   .card {
-   max-width: 300px;
-   max-height: 300px;
+   max-width: 290px;
+   max-height: 290px;
    padding: 0;
    img {
     margin-top: 0.7rem;
@@ -536,5 +537,11 @@ body {
 
  .hidden {
   display: none;
+ }
+
+ .container {
+  .leftnav {
+   width: 85vw;
+  }
  }
 }

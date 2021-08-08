@@ -19,16 +19,11 @@
 
 body {
   background: var(--bg-main);
-  width: 100vw;
+  overflow-x: hidden;
   height: 100vh;
+  width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-}
-
-.backgroundcolor {
-  background: var(--bg-main);
-  width: 100%;
-  height: 100%;
 }
 
 .container {
@@ -522,7 +517,8 @@ body {
 
 @media only screen and (max-width: 650px) {
   .container {
-    margin: 3rem auto;
+    margin: 3rem 0;
+    margin-left: auto;
     width: 85%;
   }
   .leftnav .userprofile {
@@ -555,8 +551,8 @@ body {
     margin: 0.5rem;
   }
   .container .leftnav .links .link img {
-    max-width: 30%;
-    margin-top: 2rem;
+    max-width: 40%;
+    margin-top: 2.2rem;
     margin-right: 0;
     padding: 0;
     position: absolute;

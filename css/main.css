@@ -535,6 +535,9 @@ body {
   .container .leftnav h2 {
     font-size: 0.8rem;
   }
+  .links {
+    margin-bottom: 2rem;
+  }
   .link {
     display: -webkit-box;
     display: -ms-flexbox;

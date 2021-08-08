@@ -564,8 +564,8 @@ body {
             transform: none;
   }
   .rightnav .card {
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 300px;
+    max-height: 300px;
     padding: 0;
   }
   .rightnav .card img {

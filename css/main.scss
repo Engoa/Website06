@@ -69,61 +69,63 @@ body {
 // Circles in the background
 
 // Left navigation bar
-.leftnav {
- min-width: 150px;
- max-width: 300px;
- max-height: 840px;
- display: flex;
- flex-direction: column;
- border-radius: 2rem;
- justify-content: center;
- align-items: center;
- padding: 3.3rem 0;
- background: var(--bg-glass);
- color: var(--text-main);
-
- .userprofile {
-  text-align: center;
-  margin-bottom: 2rem;
-
-  img {
-   border-radius: 50%;
-   border: 2px solid var(--h-main);
-   max-width: 100px;
-   object-fit: contain;
-  }
- }
-
- .userprofile h3,
- span {
-  opacity: 0.8;
-  margin-top: 0.5rem;
- }
- .userprofile span {
-  opacity: 0.7;
-  font-size: 0.85rem;
- }
-
- .link {
+.container {
+ position: relative;
+ .leftnav {
+  position: absolute;
+  width: 350px;
+  height: 80vh;
+  left: 0%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  border-radius: 2rem;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 3rem;
-  opacity: 0.7;
+  padding: 3.3rem 0;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.479);
 
-  h2 {
-   cursor: pointer;
-   transition: color var(--speed); // Color transition of the text
+  .userprofile {
+   text-align: center;
+   margin-top: 1rem;
+
+   img {
+    border-radius: 50%;
+    border: 2px solid var(--h-main);
+    max-width: 100px;
+    object-fit: contain;
+   }
   }
 
-  img {
-   margin-right: 0.4rem;
-   padding: 0.4rem;
-   border-radius: 50%;
-   max-width: 26%;
-   //    opacity: 0;
-   transform: scale(0); // Have the images stay hidden untill text is hovered
+  .userprofile h3,
+  span {
+   opacity: 0.8;
+   margin-top: 0.5rem;
+  }
+  .userprofile span {
+   opacity: 0.7;
+   font-size: 0.85rem;
+  }
+
+  .link {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   margin-top: 3rem;
+   opacity: 0.7;
+
+   h2 {
+    cursor: pointer;
+    transition: color var(--speed); // Color transition of the text
+   }
+
+   img {
+    margin-right: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 50%;
+    max-width: 26%;
+   }
   }
  }
 }
@@ -132,7 +134,10 @@ body {
 
 //  Link animations --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.anim {
+.links img {
+ transform: scale(0); // Have the images stay hidden untill text is hovered
+}
+.img-anim {
  cursor: pointer;
  transition: transform var(--speed), border var(--speed); // Transition animations for the Scale of the images when hovered and the border on them
 }
@@ -145,6 +150,7 @@ body {
  border: 2.2px solid rgb(196, 48, 43);
  transform: scale(1);
 }
+
 .steam:hover .hover3 {
  border: 2.2px solid rgb(0, 0, 0);
  transform: scale(1);
@@ -193,15 +199,15 @@ body {
  background: var(--bg-main);
  border-radius: 2rem;
  margin: 2rem;
- padding-left: 0.5rem;
- padding-right: 0.5rem;
+ padding: 0.5rem;
  box-shadow: var(--boxshadow);
  transition: transform var(--speed);
  cursor: pointer;
  position: relative;
+ text-align: center;
 
  h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--whiteclr);
   font-weight: bold;
   margin-left: 0.3rem;
@@ -230,7 +236,7 @@ body {
 
 .freegamescontainer:hover::after,
 .freegamescontainer:focus::after {
- opacity: 0.5;
+ opacity: 0.6;
 }
 
 // Bottom left box on left navigation bar
@@ -242,8 +248,8 @@ body {
  flex-direction: column;
  align-items: center;
  justify-content: center;
- margin-right: auto;
- margin-left: 5rem;
+ margin-left: auto;
+ margin-right: 6rem;
 
  //  Top Search bar
  .searchbar {
@@ -338,3 +344,193 @@ body {
 // Progress Bar
 
 // Right navigation menu
+
+// Media Queries!
+
+@media only screen and (max-width: 1550px) {
+ .container {
+  .leftnav {
+   display: flex;
+   flex-direction: row;
+   top: 0%;
+   right: 0;
+   height: 100px;
+   width: 73.5vw;
+   .link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto 0;
+    font-size: 0.9rem;
+   }
+   .userprofile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    img {
+     max-width: 50px;
+     margin-bottom: 0;
+    }
+    h3 {
+     font-size: 0.5rem;
+     margin-top: 0.4rem;
+    }
+    span {
+     display: none;
+    }
+   }
+  }
+ }
+
+ .freegamescontainer {
+  img {
+   max-width: 30px;
+  }
+  h2 {
+   font-size: 0.8rem;
+  }
+ }
+
+ .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-right: 1rem;
+
+  .youtube {
+   max-width: 25%;
+  }
+ }
+
+ .rightnav {
+  margin: 0 auto;
+
+  .cards {
+   .card {
+    width: 700px;
+    padding: 0.5rem;
+   }
+  }
+  .searchbar {
+   margin-bottom: 0;
+   margin-top: 8rem;
+   h2 {
+    font-size: 1.5rem;
+   }
+  }
+ }
+}
+
+@media only screen and (max-width: 1000px) {
+ .freegamescontainer {
+  display: none;
+ }
+ .rightnav {
+  .card {
+   max-width: 600px;
+   padding: 0;
+   align-items: center;
+   flex-direction: column;
+  }
+  .gameinfo {
+   h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+   }
+  }
+ }
+}
+
+@media only screen and (max-width: 800px) {
+ .rightnav {
+  .card {
+   max-width: 400px;
+   padding: 0;
+  }
+  .gameinfo {
+   h2 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+   }
+  }
+ }
+}
+
+@media only screen and (max-width: 650px) {
+ .leftnav {
+  .userprofile {
+   display: hidden;
+   margin-top: 1.5rem;
+  }
+ }
+ .container {
+  .leftnav {
+   width: 75vw;
+
+   h2 {
+    font-size: 0.8rem;
+   }
+  }
+ }
+
+ .link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  h2 {
+   margin: 0.5rem;
+  }
+ }
+
+ .container .leftnav .links .link img {
+  max-width: 30%;
+  margin-top: 4rem;
+  margin-right: 0;
+  padding: 0;
+  position: absolute;
+  transition: none;
+  transform: none;
+ }
+
+ .link:hover .img-anim {
+  border: none;
+  transform: none;
+ }
+ .rightnav {
+  .card {
+   max-width: 250px;
+   max-height: 250px;
+   padding: 0;
+   img {
+    margin-top: 0.7rem;
+   }
+
+   .progress {
+    width: 200px;
+   }
+  }
+  .gameinfo {
+   h2 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+   }
+  }
+ }
+
+ .searchbar {
+  input {
+   max-width: 210px;
+  }
+  #search-header {
+   font-size: 1.2rem;
+  }
+ }
+
+ .hidden {
+  display: none;
+ }
+}

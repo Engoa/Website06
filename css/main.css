@@ -517,8 +517,7 @@ body {
 
 @media only screen and (max-width: 650px) {
   .container {
-    margin: 3rem 0;
-    margin-left: auto;
+    margin: 3rem auto;
     width: 85%;
   }
   .leftnav .userprofile {

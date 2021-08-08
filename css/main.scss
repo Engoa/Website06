@@ -279,14 +279,6 @@ body {
    background: var(--bg-glass);
    box-shadow: var(--boxshadow);
   }
-
-  input::after {
-   content: '/f054';
-   font-weight: bold;
-   font-family: 'Font Awesome 5 Free';
-   color: var(--bg-main);
-   font-size: 1.1rem;
-  }
  }
 }
 
@@ -400,6 +392,7 @@ body {
   }
   h2 {
    font-size: 0.8rem;
+   max-width: 90px;
   }
  }
 
@@ -483,7 +476,7 @@ body {
   }
  }
  .links {
-   margin-bottom: 2rem;
+  margin-bottom: 2rem;
  }
 
  .link {

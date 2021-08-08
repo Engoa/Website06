@@ -19,6 +19,7 @@
 }
 
 body {
+ width: 100%;
  height: 100vh;
  background: var(--bg-main);
  font-family: 'Montserrat', sans-serif;
@@ -83,7 +84,7 @@ body {
   align-items: center;
   padding: 3.3rem 0;
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.479);
+  background: rgba(255, 255, 255, 0.466);
 
   .userprofile {
    text-align: center;
@@ -207,7 +208,7 @@ body {
  text-align: center;
 
  h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--whiteclr);
   font-weight: bold;
   margin-left: 0.3rem;
@@ -293,7 +294,7 @@ body {
   justify-content: space-between;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   align-items: center;
-  width: 650px;
+  width: 670px;
 
   .gameinfo {
    text-align: center;
@@ -408,7 +409,7 @@ body {
 
   .cards {
    .card {
-    width: 700px;
+    width: 650px;
     padding: 0.5rem;
    }
   }
@@ -458,6 +459,9 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
+ .container {
+  margin: 3rem auto;
+ }
  .leftnav {
   .userprofile {
    display: hidden;

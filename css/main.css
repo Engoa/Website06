@@ -18,6 +18,7 @@
 }
 
 body {
+ width: 100%;
  height: 100vh;
  background: var(--bg-main);
  font-family: 'Montserrat', sans-serif;
@@ -93,7 +94,7 @@ body {
  align-items: center;
  padding: 3.3rem 0;
  color: var(--text-main);
- background: rgba(255, 255, 255, 0.479);
+ background: rgba(255, 255, 255, 0.466);
 }
 
 .container .leftnav .userprofile {
@@ -242,7 +243,7 @@ body {
 }
 
 .freegamescontainer h2 {
- font-size: 1.2rem;
+ font-size: 1.5rem;
  color: var(--whiteclr);
  font-weight: bold;
  margin-left: 0.3rem;
@@ -345,7 +346,7 @@ body {
  -webkit-box-align: center;
  -ms-flex-align: center;
  align-items: center;
- width: 650px;
+ width: 670px;
 }
 
 .cards .card .gameinfo {
@@ -469,7 +470,7 @@ body {
   margin: 0 auto;
  }
  .rightnav .cards .card {
-  width: 700px;
+  width: 650px;
   padding: 0.5rem;
  }
  .rightnav .searchbar {
@@ -514,6 +515,9 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
+ .container {
+  margin: 3rem auto;
+ }
  .leftnav .userprofile {
   display: hidden;
   margin-top: 1.5rem;

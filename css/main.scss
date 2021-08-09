@@ -577,6 +577,10 @@ body {
    opacity: 1;
   }
  }
+
+ .container::after, .container::before {
+     opacity: 0.4;
+ }
 }
 
 

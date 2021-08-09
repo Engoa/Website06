@@ -655,6 +655,9 @@ body {
       opacity: 1;
     }
   }
+  .container::after, .container::before {
+    opacity: 0.4;
+  }
 }
 
 @media screen and (min-width: 1240px) {

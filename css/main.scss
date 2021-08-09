@@ -291,7 +291,7 @@ body {
   background: var(--bg-glass);
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem 3rem;
+  margin: 2rem 0;
   border-radius: 1rem;
   padding: 1rem;
   justify-content: space-between;
@@ -299,6 +299,9 @@ body {
   align-items: center;
   width: 750px;
 
+  img {
+   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.493));
+  }
   .gameinfo {
    text-align: center;
    font-weight: bold;
@@ -444,6 +447,21 @@ body {
    }
   }
  }
+
+ .cards {
+  animation: cards-anim-mobile 1s linear;
+ }
+ @keyframes cards-anim-mobile {
+  0% {
+   transform: translateY(-10%);
+   opacity: 0;
+  }
+
+  100% {
+   transform: translateY(0px);
+   opacity: 1;
+  }
+ }
 }
 
 @media only screen and (max-width: 800px) {
@@ -460,7 +478,6 @@ body {
   }
  }
 }
-
 @media only screen and (max-width: 650px) {
  .container {
   margin: 3rem auto;
@@ -543,6 +560,40 @@ body {
   .leftnav {
    width: 75vw;
    margin: 1rem auto;
+  }
+ }
+
+ .cards {
+  animation: cards-anim-mobile 1s linear;
+ }
+ @keyframes cards-anim-mobile {
+  0% {
+   transform: translateY(-10%);
+   opacity: 0;
+  }
+
+  100% {
+   transform: translateY(0px);
+   opacity: 1;
+  }
+ }
+}
+
+
+
+@media screen and (min-width: 1240px) {
+ .cards {
+  animation: cardsanim 600ms linear;
+ }
+ @keyframes cardsanim {
+  0% {
+   transform: translateX(-35%);
+   opacity: 0;
+  }
+
+  100% {
+   transform: translateX(0px);
+   opacity: 1;
   }
  }
 }
